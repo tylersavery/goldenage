@@ -1,0 +1,363 @@
+
+
+/* colors:
+  
+  focused gold: #e8a749
+  lighter gold: #eebd77
+  dark: #302818
+  silver: #dbdcdd
+  
+*/
+
+.clear{
+    clear:both;
+    height:1px;
+    margin-bottom:-1px;
+}
+
+.vspace10{
+    position:relative;
+    height:10px;
+    clear:both;
+}
+
+.divider{
+    position:relative;
+    width:100%;
+    height:3px;
+    background-color:#e8a749;
+    margin-bottom:10px;
+}
+
+
+body{
+    background: #cacbcc; /* Old browsers */
+    background: -moz-linear-gradient(top, #cacbcc 0%, #c5c6c8 30%, #838588 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cacbcc), color-stop(30%,#c5c6c8), color-stop(100%,#838588)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #cacbcc 0%,#c5c6c8 30%,#838588 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #cacbcc 0%,#c5c6c8 30%,#838588 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #cacbcc 0%,#c5c6c8 30%,#838588 100%); /* IE10+ */
+    background: linear-gradient(top, #cacbcc 0%,#c5c6c8 30%,#838588 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacbcc', endColorstr='#838588',GradientType=0 ); /* IE6-9 */
+
+    font-family:Helvetica, Arial, sans-serif;
+
+}
+
+
+.wrap{
+    width:940px;
+    margin:auto;
+    position:relative;
+}
+
+
+/* HEADER */
+
+#header{
+    position:relative;
+    background-color: #302818;
+}
+
+#header #logo{
+    height:200px;
+    text-indent:-9999px;
+    background-image:url(/images/logo.png);
+    width:940px;
+    height:231px;
+    position:relative;
+
+}
+
+#header #social_container{
+    position:absolute;
+    width:90px;
+    height:42px;
+    top:0px;
+    right: 0px;
+}
+
+#header #social_container .social a{
+    position:relative;
+    float:left;
+    margin-left:7px;
+    height:38px;
+    width:37px;
+    text-indent:-9999px;
+    display:block;
+    margin-top:-5px;
+    -webkit-transition-duration: .05s, .1s;
+}
+
+#header #social_container .social a:hover{
+    margin-top:0px;
+}
+
+#header #social_container .social#social_facebook a{
+    background-image:url(/images/facebook1.gif);
+}
+
+#header #social_container .social#social_twitter a{
+    background-image:url(/images/twitter1.gif);
+}
+
+
+/* MENU */
+
+#navigation{
+    position:relative;
+    width:100%;
+    height:44px;
+    background-color:#e8a749;
+}
+
+#navigation ul{
+    position:relative;
+    height:24px;
+    background-color:#fff;
+    border-top: 5px solid #302818;
+    border-bottom: 5px solid #302818;
+    top:5px;
+    display:block;
+    list-style:none;
+}
+
+#navigation ul li{
+    display:inline;
+    position:relative;
+    width:100px;
+}
+
+#navigation ul li a{
+    display:block;
+    height:24px;
+    line-height:24px;
+    text-decoration:none;
+    color:#000;
+    width:104px;
+    text-align:center;
+    font-size:12px;
+    position:relative;
+    margin:0;
+    float:left;
+    font-weight:bold;
+}
+
+#navigation ul li a:last-child{
+    width:104px;
+    margin-right:0px;
+}
+
+#navigation ul li a.active{
+    background-color:#e8a749;
+ 
+}
+
+#navigation ul li a:hover{
+    background-color:#eebd77;
+}
+
+
+#navigation ul li:after{
+    content:'';
+    position:absolute;
+    width:4px;
+    height:16px;
+    background-color:#000;
+    top:3px;
+    margin-left:-2px;
+    z-index:10;
+
+}
+
+#navigation ul li:last-child:after{
+    background-color:transparent;
+    display:none;
+}
+
+
+
+
+/* SLIDER */
+
+
+#slider{
+    position:relative;
+}
+
+#slider ul{
+    position:relative;
+    width:100%;
+    height:275px;
+    
+}
+
+/* OTHER STYLES ARE IN anythignslider.css */
+
+
+/* HOME PAGE CONTENT (OUTER POSTS) */
+
+
+#page_content{
+    position:relative;
+}
+
+#outer_posts{
+    position:relative;
+}
+
+
+.outer_post{
+    position:relative;
+    height:260px;
+    width:100%;
+    
+    background-color:#eebd77;
+    
+}
+
+.outer_post .photo{
+    position:relative;
+    float:left;
+    height:260px;
+    width:340px;
+    background-color:#eebd77;
+    margin-left:-14px;
+    padding-left:14px;
+}
+
+.outer_post:hover{
+    background-color:#e8a749;
+}
+
+.outer_post:hover .photo{
+    background-color:#3d392d;
+}
+
+.outer_post .content{
+    position:relative;
+    float:left;
+    width: 600px;
+}
+
+.outer_post .content .top{
+    position:relative;
+    height: 34px;
+    background-color:#fff;
+    width:100%;
+}
+
+
+.outer_post .content .top .date{
+    position:absolute;
+    top: 10px;
+    left:20px;
+    color: #000;
+    font-style:italic;
+    font-size:16px;
+}
+
+
+.outer_post .content .top .comment_number{
+    position:absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #000;
+    height: 16px;
+    line-height:16px;
+    padding-left:6px;
+    padding-right:6px;
+    color:#fff;
+    font-size: 10px;
+    font-style:italic;
+}
+
+
+.outer_post .content .title{
+    position:relative;
+    width:100%;
+    background-color:#e8a749;
+    height: 46px;
+    line-height:46px;
+    font-size: 40px;
+    font-weight:bold;
+}
+
+.outer_post .content .body{
+    position:relative;
+    background-color:#fff;
+    height: 120px;
+    padding: 20px;
+    font-size:16px;
+    color: #000;
+    font-style:italic;
+}
+
+.outer_post .content .body .more{
+    position:absolute;
+    bottom:8px;
+    right:8px;
+}
+
+.outer_post .content .body .more a{
+    color:#e8a648;
+    font-size: 20px;
+    text-transform:uppercase;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+}
+
+
+.outer_post .content .category{
+    margin-left:20px;
+    font-size:12px;
+    color:#000;
+    margin-top:3px;
+    text-transform:lowercase;
+}
+
+
+
+
+
+/* FOOTER */
+
+
+#footer{
+    position:relative;
+    background-color:#302818;
+    height: 40px;
+    padding-top:10px;
+}
+
+
+#footer #footer_left{
+    position:absolute;
+    left: 0px;
+    top:10px;
+    color:#fff;
+    font-size:10px;
+}
+
+
+#footer #footer_right{
+    position:absolute;
+    right: 0px;
+    top:10px;
+    color:#fff;
+    font-size:10px;
+}
+
+#footer #footer_right a{
+    color:#fff;
+    text-decoration:none;
+}
+
+#footer #footer_right a:hover{
+    text-decoration:underline;
+}
+
+
+
+
