@@ -429,32 +429,32 @@ clear:both;
     font-weight:bold;
 }
 
-.inner_post .content .body{
-    position:relative;
-    background-color:#fff;
-    height: 120px;
-    padding: 20px;
-    font-size:16px;
-    color: #000;
-    font-style:italic;
+.inner_post .content .separator{
+    background:#302818;
+    color:#dbdcdd;
+    text-align:center;
+    min-height:14px;
 }
 
 .inner_post .content .comment{
     position:relative;
     background-color:#fff;
+    min-height:100px;
     padding:14px;
+}
+.inner_post .content .comment .postbody{
+    padding:0px 0px 5px 0px;
     font-size:16px;
-    color: #000;
+    color: #000000;
     font-style:italic;
 }
-
-.inner_post .content .body .more{
+.inner_post .content .comment .more{
     position:absolute;
     bottom:8px;
     right:8px;
 }
 
-.inner_post .content .body .more a{
+.inner_post .content .comment .more a{
     color:#e8a648;
     font-size: 20px;
     text-transform:uppercase;
@@ -462,13 +462,37 @@ clear:both;
     font-style:normal;
     text-decoration:none;
 }
+.inner_post .content .comment .thumb{
+    height:100px;
+    width: 100px;
+	border: 1px solid #e8a749;
+    background:#dbdcdd;
+    float:left;
+    margin-right:10px;
+}
+.inner_post .content .comment .date{
+    padding:0px 0px 5px 10px;
+    color:#e8a749;
+}
+.inner_post .content .comment .name{
+    padding:0px 0px 5px 10px;
+    text-transform:uppercase;
+    font-style:bold;
+}
+.inner_post .content .comment .body{
+    padding:0px 0px 5px 0px;
+    font-size:14px;
+    color: #000000;
+    font-style:italic;
+}
 
 .inner_post .content .category{
-    margin-left:20px;
+    padding-left:20px;
     font-size:12px;
     color:#000;
-    margin-top:3px;
+    padding-top:3px;
     text-transform:lowercase;
+    background:#eebd77;
 }
 
 /*form styles*/
@@ -501,8 +525,8 @@ clear:both;
 	background: #dbdcdd;
 	margin:2px;
 }
-/* the button styles i made before referring to the layout image*/
 
+/*button styles*/
 #bsubmit, #bupload {
 	padding:5px;
     margin-top:5px;
@@ -510,34 +534,19 @@ clear:both;
     background:#302818;
     color:#dbdcdd;
     font-size:12px;
-    vertical-align:bottom;
 }
 #bsubmit:hover, #bupload:hover {
 	background: #dbdcdd;	
     color:#302818;
 }
 
-
-/* button style like the comments, and the layout image.*/
-/*
-.frmright #bsubmit, #bupload {
-    background-color: #000;
-    height: 28px;
-    line-height:16px;
-    padding-left:6px;
-    padding-right:6px;
-    color:#fff;
-    font-size: 10px;
-    font-style:italic;
-}
-*/
 label {
 	font: 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 }
 
 /* colors:
   
-  focused gold: 
+  focused gold:  #e8a749
   lighter gold: #eebd77
   dark: #302818
   silver: #dbdcdd
