@@ -27,7 +27,7 @@ switch(ENVIROMENT) {
         
         break;
 
- case 'goldenage':
+ 	case 'goldenage':
         define('MODE', 'DEVELOPMENT');
         define('DB_HOST', '127.0.0.1');
         define('DB_USER', 'root');
@@ -36,7 +36,7 @@ switch(ENVIROMENT) {
         define('DB_SALT', 'b810687c692b88184eb11c6d29b5cda4');
         define('DEBUG', TRUE);
         define('MIN_JS', FALSE);
-        define('URL', 'http://goldenage.dev/');
+        define('URL', 'http://goldenage/');
         define('FB_APP_ID', '');
         define('TWITTER_USER', 'mrjeopardypants');
         define('TWITTER_PASS', 'telephone2');
@@ -51,7 +51,6 @@ switch(ENVIROMENT) {
         
         break;
 }
-
 // define ROOT directories
 
 //private
@@ -70,6 +69,6 @@ define('IMAGE_UPLOAD_ROOT', PUBLIC_ROOT.'images'.DS.'uploads'.DS);
 //public
 define('IMAGE_ROOT', '/images/');
 define('CSS_ROOT', '/css/');
-define('JS_ROOT', '/js/')
+define('JS_ROOT', '/js/');
 
 ?>

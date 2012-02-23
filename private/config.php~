@@ -26,26 +26,17 @@ switch(ENVIROMENT) {
         define('BITLY_LOGIN', 'tylersavery');
         
         break;
-<<<<<<< HEAD
 
- case 'goldenage':
+ 	case 'goldenage':
         define('MODE', 'DEVELOPMENT');
         define('DB_HOST', '127.0.0.1');
         define('DB_USER', 'root');
         define('DB_PASS', '1t15c0ld');
-=======
-    
-    case 'dev.thegoldenage.ca':
-        define('MODE', 'DEVELOPMENT');
-        define('DB_HOST', '127.0.0.1');
-        define('DB_USER', 'root');
-        define('DB_PASS', '');
->>>>>>> 089dc995be4b50d25f7934236dd03aedc8257159
         define('DB_NAME', 'goldenage');
         define('DB_SALT', 'b810687c692b88184eb11c6d29b5cda4');
         define('DEBUG', TRUE);
         define('MIN_JS', FALSE);
-        define('URL', 'http://goldenage.dev/');
+        define('URL', 'http://goldenage/');
         define('FB_APP_ID', '');
         define('TWITTER_USER', 'mrjeopardypants');
         define('TWITTER_PASS', 'telephone2');
@@ -60,7 +51,6 @@ switch(ENVIROMENT) {
         
         break;
 }
-
 // define ROOT directories
 
 //private
@@ -77,8 +67,8 @@ define('LIBRARY_ROOT', PRIVATE_ROOT.'libraries'.DS);
 define('IMAGE_UPLOAD_ROOT', PUBLIC_ROOT.'images'.DS.'uploads'.DS);
 
 //public
-define('IMAGE_ROOT', '/images/');
-define('CSS_ROOT', '/css/');
-define('JS_ROOT', '/js/')
+define('IMAGE_ROOT1', '/images/');
+define('CSS_ROOT1', '/css/');
+define('JS_ROOT1', '/js/');
 
 ?>
