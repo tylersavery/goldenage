@@ -9,6 +9,7 @@
                         <li <?php if($this->active_link == 'articles'): echo ' class="active" '; endif;?>><a href="/admin/articles">Articles</a></li>
                         <li <?php if($this->active_link == 'users'): echo ' class="active" '; endif;?>><a href="/admin/users">Users</a></li>
                         <li <?php if($this->active_link == 'categories'): echo ' class="active" '; endif;?>><a href="/admin/categories">Categories</a></li>
+                        <li <?php if($this->active_link == 'comments'): echo ' class="active" '; endif;?>><a href="/admin/comments">Comments</a></li>
                     
                     </ul>
                     

@@ -1,3 +1,5 @@
+var _DEBUG = true;
+
 function isNumber (o) {
   return ! isNaN (o-0);
 }
@@ -36,4 +38,11 @@ function string_to_slug(str) {
     .replace(/\s+/g, '-') // collapse whitespace and replace by -
     .replace(/-+/g, '-'); // collapse dashes
   return str;
+}
+
+
+function debug(obj){
+  if(window.console && console.log && _DEBUG == true){
+    console.log(obj);
+  }
 }

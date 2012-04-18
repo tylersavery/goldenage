@@ -7,7 +7,7 @@ class Home_Controller extends Static_Main_Controller {
         parent::__construct($uri, $data);
         
         $this->css[] = CSS_ROOT . 'home.css';
-        $this->articles = Article_Model::find_all();
+        $this->articles = Article_Model::find_all_articles();
         
         $this->content_view->articles = $this->articles;
     }

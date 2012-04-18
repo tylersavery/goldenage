@@ -123,7 +123,7 @@ body{
 #navigation ul li{
     display:inline;
     position:relative;
-    width:100px;
+    width:190px;
 }
 
 #navigation ul li a{
@@ -132,7 +132,7 @@ body{
     line-height:24px;
     text-decoration:none;
     color:#000;
-    width:104px;
+    width:187px;
     text-align:center;
     font-size:12px;
     position:relative;
@@ -142,7 +142,7 @@ body{
 }
 
 #navigation ul li a:last-child{
-    width:104px;
+   /* width:104px;*/
     margin-right:0px;
 }
 
@@ -270,7 +270,7 @@ body{
 }
 
 
-.outer_post .content .title{
+.outer_post .content .title, .outer_post .content .title a{
     position:relative;
     width:100%;
     background-color:#e8a749;
@@ -278,6 +278,8 @@ body{
     line-height:46px;
     font-size: 40px;
     font-weight:bold;
+    color:#000;
+    text-decoration:none;
 }
 
 .outer_post .content .body{
@@ -448,6 +450,13 @@ clear:both;
     color: #000000;
     font-style:italic;
 }
+
+.inner_post .content .comment .postbody p{
+    margin-bottom: 9px;
+    margin-top: 9px;
+    line-height: 18px;
+}
+
 .inner_post .content .comment .more{
     position:absolute;
     bottom:8px;
@@ -470,6 +479,13 @@ clear:both;
     float:left;
     margin-right:10px;
 }
+
+.inner_post .content .comment .thumb img {
+    width:100px;
+    height:100px;
+    overflow:hidden;
+}
+
 .inner_post .content .comment .date{
     padding:0px 0px 5px 10px;
     color:#e8a749;
@@ -508,6 +524,14 @@ clear:both;
 	width:225px;
 	padding:2px;
 }
+
+
+.frmleft .frmpic img{
+    width:225px;
+    overflow:hidden;
+    height:225px;
+}
+
 .frmright {
 	text-align:right;
 	margin-right:5%;
@@ -524,6 +548,7 @@ clear:both;
 	border: 1px solid #e8a749;
 	background: #dbdcdd;
 	margin:2px;
+    vertical-align:top;
 }
 
 /*button styles*/

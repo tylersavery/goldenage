@@ -22,15 +22,13 @@ function submit_article_form() {
 	
 	generateSlug();
 	
-	var tinymce_content = tinyMCE.get('body').getContent();
-	var content = $(tinymce_content);
-	$(content).find('img').each(function() {
-		$(this).removeAttr('src');
-	});
+	var tinymce_content = tinyMCE.get('body').getContent();	
+	$("#body").val(tinymce_content);
 	
-	$("#body").text($(content).html());
 	var datastring = $("#article_form").serialize();
 	//$("#submit_article_button").attr("disabled", "disabled");
+	
+	debug(datastring);
 	
 	$.ajax({
 		url: "/ajax/post/article",
@@ -38,10 +36,10 @@ function submit_article_form() {
 		data: datastring,
 		success: function(data) {
 			
-			//console.log(data);
+			debug(data);
 			
 			alert("The article was successfully saved.");
-			window.location = '/admin/articles';
+			//window.location = '/admin/articles';
 		}
 	});
 	return true;

@@ -15,16 +15,20 @@
             <? foreach($this->articles as $article): ?>
             
             <div class="outer_post">
-                <div class="photo"><img src="/images/temp/photo1.jpg"></div>
+                <div class="photo">
+                <? if($article->get_thumbnail_image()): ?>
+                    <img src="<?= $article->get_thumbnail_image()->get_permalink();?>">
+                <? endif; ?>
+                </div>
                 <div class="content">
                     <div class="top">
-                        <div class="date">January 12th, 2012</div>
-                        <div class="comment_number">12 Comments</div>
+                        <div class="date"><?= $article->get_friendly_date(); ?></div>
+                        <div class="comment_number"><?= $article->get_num_comments();?></div>
                     </div><!-- /.top -->
-                    <div class="title"><?= $article->get_title(); ?></div>
+                    <div class="title"><a href="<?= $article->get_permalink();?>"><?= $article->get_title(); ?></a></div>
                     <div class="body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id mi dui, sit amet pulvinar nisi. Integer ullamcorper orci urna, non ultricies neque. Aliquam erat volutpat. Nullam vehicula, neque bibendum imperdiet semper, risus enim vehicula lorem, sed pellentesque ipsum dolor a nisl.
-                        <div class="more"><a href="#">Read More</a></div>
+                        <?= $article->get_excerpt(); ?>
+                        <div class="more"><a href="<?= $article->get_permalink();?>">Read More</a></div>
                     </div> <!--/.body -->
                     <div class="category">music</div>
                 </div><!-- /.content -->

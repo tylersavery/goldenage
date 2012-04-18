@@ -6,9 +6,7 @@ class Main_Controller extends Static_Main_Controller {
     function __construct($uri, $data) {
         parent::__construct($uri, $data);
 
-       
-
-        $this->articles = Article_Model::find_all();
+        $this->articles = Article_Model::find_home_articles();
         
         $this->content_view->articles = $this->articles;
     }

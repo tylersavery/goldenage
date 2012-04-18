@@ -32,6 +32,11 @@ class Image_Model extends Core_Image_Model {
 		
 		return false;
 	}
+	
+	
+	public function get_permalink(){
+		return '/images/uploads/' . $this->get_file_name();
+	}
     
 }
 ?>

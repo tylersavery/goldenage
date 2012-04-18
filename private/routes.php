@@ -21,6 +21,24 @@ class Pigeon {
               array('article', '{is_string:article_slug}||{is_int:article_id}')
             ),
             
+            //Pages
+            
+            'Mission_Controller' => array(
+                array('mission')
+            ),
+            
+            'Services_Controller' => array(
+                array('services')
+            ),
+            
+            'Roster_Controller' => array(
+                array('roster')
+            ),
+            
+            'Contact_Controller' => array(
+                array('contact')
+            ),
+            
             
             
             //admin
@@ -46,6 +64,19 @@ class Pigeon {
             ),
             'Admin_Article_Edit_Controller' => array(
                 array('admin', 'article', 'edit', '{is_int:article_id}'),         
+            ),
+            
+             //articles
+            
+            'Admin_Comment_Controller' => array(
+                array('admin', 'comment'),         
+                array('admin', 'comments')
+            ),
+            'Admin_Comment_Add_Controller' => array(
+                array('admin', 'comment', 'add'),         
+            ),
+            'Admin_Comment_Edit_Controller' => array(
+                array('admin', 'comment', 'edit', '{is_int:comment_id}'),         
             ),
             
             //categories
@@ -133,6 +164,10 @@ class Pigeon {
             ),
             'Ajax_Post_Article_Image_Remove_Controller' => array(
                 array('ajax', 'post', 'article', 'image', 'remove')
+            ),
+            
+            'Static_Scaffolding_Controller' => array(
+                array('generate', '{is_string:model_name}', '{is_string:action}')  
             ),
             
             

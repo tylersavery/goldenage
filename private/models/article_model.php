@@ -38,6 +38,16 @@ class Article_Model extends Core_Article_Model {
 				)
 			);
 			
+			$article->set_slider_image(
+				Image_Model::find_by_attributes(
+					array(
+						'image_crop_id' => 4,
+						'image_hash'    => $image_hash
+					)
+				)
+			);
+			
+			
 		}
 		
 		
@@ -47,11 +57,23 @@ class Article_Model extends Core_Article_Model {
 		return $article;
 	}
 	
+	public static function find_home_articles(){
+		$sql = "SELECT * FROM ".static::$table_name . " WHERE category_id <> '". STATIC_CATEGORY_ID ."' ORDER BY time_publish DESC";
+		return static::find_by_sql($sql);
+		
+	}
+	
 	
 	public static function find_by_slug($slug) {
 		$result = static::find_by_sql("SELECT * FROM " . static::$table_name . " WHERE slug = '". $slug . "' LIMIT 1");
 		return !empty($result) ? array_shift($result) : false;
 		
+	}
+	
+	
+	public static function find_all_by_slug($slug){
+		$result = static::find_by_sql("SELECT * FROM " . static::$table_name . " WHERE slug = '". $slug . "' LIMIT 1");
+		return $result;
 	}
 	
 	protected function create(){
@@ -135,6 +157,35 @@ class Article_Model extends Core_Article_Model {
 	
 	public function set_thumbnail_image($thumbnail_image) {
 		$this->thumbnail_image = $thumbnail_image;
+	}
+	
+	public function get_slider_image() {
+		return $this->slider_image;
+	}
+	
+	public function set_slider_image($slider_image) {
+		$this->slider_image = $slider_image;
+	}
+	
+	public function get_friendly_date($format = "F jS, Y"){
+		return date($format, $this->get_time_publish());
+	}
+	
+	public function get_num_comments(){
+		
+		$sql = "SELECT COUNT(*) FROM comments WHERE article_id = " . $this->id;
+		global $database;
+		
+		$result = $database->query($sql);
+		$count = $database->fetch_array($result);
+		
+		if($count[0] == 1){
+			return "1 Comment";
+		}
+		
+		return $count[0] . " Comments";
+		
+		
 	}
 
 }

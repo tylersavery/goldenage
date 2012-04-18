@@ -46,13 +46,17 @@ class Ajax_Post_Article_Controller extends Ajax_Post_Controller {
 		if(isset($twitter_message)) { $article->set_twitter_message($twitter_message); }
 		if(isset($image_hash)) { $article->set_image_hash($image_hash); }
 		
-		if(!(is_numeric($id) && $id > 0)) {
-			$bitly = new Bitly(BITLY_LOGIN, BITLY_KEY);
-			$response = $bitly->shorten($article->get_permalink(true));
-			$short_url = $response['url'];
-			
-			$article->set_bitly($short_url);
+		
+		if(USE_BITLY){
+			if(!(is_numeric($id) && $id > 0)) {
+				$bitly = new Bitly(BITLY_LOGIN, BITLY_KEY);
+				$response = $bitly->shorten($article->get_permalink(true));
+				$short_url = $response['url'];
+				
+				$article->set_bitly($short_url);
+			}
 		}
+		
 		
 		$article->save();
 		return $article->get_id();

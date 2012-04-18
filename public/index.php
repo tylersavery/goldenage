@@ -9,12 +9,10 @@ define('DS', DIRECTORY_SEPARATOR);
 // define DOCUMENT_ROOT
 switch(ENVIROMENT) {
 
-    case 'goldenage.dev':
-        define('DOCUMENT_ROOT', DS.'Users'.DS.'admin'.DS.'Sites'.DS.'goldenage'.DS);
-        break;
     case 'goldenage':
-        define('DOCUMENT_ROOT', DS.'var'.DS.'www'.DS.'goldenage'.DS);
+        define('DOCUMENT_ROOT', DS.'Users'.DS.'tyler'.DS.'Sites'.DS.'goldenage'.DS);
         break;
+
     
 }
 

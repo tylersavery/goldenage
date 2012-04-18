@@ -28,6 +28,10 @@ class Static_Base_Controller extends Core_Controller {
         $this->header_view = new Savant3($this->view_config);
         $this->footer_view = new Savant3($this->view_config);
 		
+		$this->facebook = new Facebook(array(
+			'appId'  => FACEBOOK_APP_ID,
+			'secret' => FACEBOOK_SECRET));;
+		
 		
 		
     }
