@@ -8,6 +8,7 @@ if(isset($this->article)) {
 	$subtitle = $this->article->get_subtitle();
 	$body = $this->article->get_body();
 	$slug = $this->article->get_slug();
+	$tags = $this->article->get_tags();
 	$twitter_message =  $this->article->get_twitter_message();
 	$facebook_message = $this->article->get_facebook_message();
 	$time_create = $this->article->get_time_create();
@@ -29,6 +30,7 @@ if(isset($this->article)) {
 	$subtitle = null;
 	$body = null;
 	$slug = null;
+	$tags = null;
 	$twitter_message = null;
 	$facebook_message = null;
 	$time_create = null;
@@ -67,6 +69,10 @@ $type = $this->user->get_type();
 					<option value="<?php echo $user->get_id();?>" <?php if($user->get_id() == $user_id) echo 'selected="selected"';?>><?php echo $user->get_full_name(); ?></option>
 				<?php endforeach; ?>
 			</select>
+			
+			<h3>Tags</h3>
+			<input type="text" id="tags" name="tags" value="<?= $tags;?>" /><br />
+			
 		</div>	
 
 		<div class="span4">

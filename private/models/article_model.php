@@ -190,6 +190,15 @@ class Article_Model extends Core_Article_Model {
 		
 		
 	}
+	
+	public function get_tag_array(){
+		
+		$tag_string = rtrim($this->get_tags(), ',');
+		$tag_array = explode(',', $tag_string);
+		
+		return $tag_array;
+		
+	}
 
 }
 ?>

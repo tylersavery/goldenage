@@ -101,8 +101,10 @@ class Article_Controller extends Static_Main_Controller {
         
         if($this->article->get_category_id() == STATIC_CATEGORY_ID){
             $this->content_view->show_comments = false;
+            $this->content_view->show_date = false;
         } else {
             $this->content_view->show_comments = true;
+            $this->content_view->show_date = true;
         }
         
         

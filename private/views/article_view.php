@@ -16,8 +16,8 @@
                 <div class="inner_post">
                     <div class="content">
                         <div class="top">
-                            <div class="date"><?= $this->article->get_friendly_date(); ?></div>
-                            <div class="comment_number"><?= $this->article->get_num_comments();?></div>
+                            <div class="date"><? if($this->show_date):?><?= $this->article->get_friendly_date(); ?><? endif;?></div>
+                            <? if($this->show_comments):?><div class="comment_number"><?= $this->article->get_num_comments();?></div><? endif;?>
                         </div><!-- /.top -->
                         <div class="title"><?= $this->article->get_title(); ?></div>
                         <div class="comment">
@@ -26,7 +26,15 @@
                             </div>                            
                             
                         </div> <!--/.body -->
-                        <div class="category">&nbsp;</div>
+                        <div class="category"><?= ucwords($this->article->get_category()->get_title());?>
+								<span class="tags">
+								<? if($this->article->get_tags()): ?>
+									<? foreach($this->article->get_tag_array() as $tag): ?>
+										#<?= strtolower($tag) . " "; ?>
+									<? endforeach; ?>
+								</span>
+								<? endif; ?>
+						</div>
                     </div><!-- /.content -->
                     <div class="clear"></div>
                 </div><!-- /.outer_post -->

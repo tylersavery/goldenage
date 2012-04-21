@@ -10,6 +10,7 @@ class Core_Article_Model extends Core_Model {
 		'subtitle',
 		'body',
 		'slug',
+		'tags',
 		'image_hash',
 		'bitly',
 		'facebook_id',
@@ -29,6 +30,7 @@ class Core_Article_Model extends Core_Model {
 	protected $subtitle;
 	protected $body;
 	protected $slug;
+	protected $tags;
 	protected $image_hash;
 	protected $bitly;
 	protected $facebook_id;
@@ -96,6 +98,14 @@ class Core_Article_Model extends Core_Model {
 
 	public function set_slug($slug) {
 		$this->slug = $slug;
+	}
+	
+	public function get_tags() {
+		return $this->tags;
+	}
+
+	public function set_tags($tags) {
+		$this->tags = $tags;
 	}
 	
 	public function get_image_hash() {

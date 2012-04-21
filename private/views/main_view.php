@@ -27,7 +27,15 @@
                         <?= $article->get_excerpt(); ?>
                         <div class="more"><a href="<?= $article->get_permalink();?>">Read More</a></div>
                     </div> <!--/.body -->
-                    <div class="category">music</div>
+                    <div class="category"><?= ucwords($article->get_category()->get_title());?>
+                    <span class="tags">
+                    <? if($article->get_tags()): ?>
+                        <? foreach($article->get_tag_array() as $tag): ?>
+                            #<?= strtolower($tag) . " "; ?>
+                        <? endforeach; ?>
+                    </span>
+                    <? endif; ?>
+                    </div>
                 </div><!-- /.content -->
                 <div class="clear"></div>
             </div><!-- /.outer_post -->

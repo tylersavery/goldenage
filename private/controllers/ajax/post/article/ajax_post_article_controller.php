@@ -22,6 +22,7 @@ class Ajax_Post_Article_Controller extends Ajax_Post_Controller {
 		if(isset($_POST['subtitle'])) { $subtitle = $_POST['subtitle']; }
 		if(isset($_POST['body'])) { $body = $_POST['body']; }
 		if(isset($_POST['slug'])) { $slug = $_POST['slug']; }
+		if(isset($_POST['tags'])) { $tags = $_POST['tags']; }
 		if(isset($_POST['time_publish'])) { $time_publish = strtotime($_POST['time_publish']); }
 		if(isset($_POST['status'])) { $status = $_POST['status']; }
 		if(isset($_POST['facebook_message'])) { $facebook_message = $_POST['facebook_message']; }
@@ -40,6 +41,7 @@ class Ajax_Post_Article_Controller extends Ajax_Post_Controller {
 		if(isset($subtitle)) { $article->set_subtitle($subtitle); }
 		if(isset($body)) { $article->set_body($body); }
 		if(isset($slug)) { $article->set_slug($slug); }
+		if(isset($tags)) { $article->set_tags($tags); }
 		if(isset($time_publish)) { $article->set_time_publish($time_publish); }
 		if(isset($status)) { $article->set_status($status); }
 		if(isset($facebook_message)) { $article->set_facebook_message($facebook_message); }

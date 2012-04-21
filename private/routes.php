@@ -83,6 +83,10 @@ class Pigeon {
                 array('admin', 'comment', 'edit', '{is_int:comment_id}'),         
             ),
             
+            'Admin_Comment_Delete_Controller' => array(
+                array('admin', 'comment', 'delete', '{is_int:comment_id}'),         
+            ),
+            
             //categories
             
             'Admin_Category_Controller' => array(
