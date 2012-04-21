@@ -25,7 +25,7 @@ class Blur_Controller extends Core_Controller {
                 $image = imagecreatefromgif($image_p);
             break;
         }
-        
+        /*
 		imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
         imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
         imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
@@ -36,20 +36,9 @@ class Blur_Controller extends Core_Controller {
         imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
         imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
         imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($image, IMG_FILTER_NEGATE);
+        */
+        
+        imagefilter($image, IMG_FILTER_PIXELATE, 32, false);
         
         
         switch($mime){
