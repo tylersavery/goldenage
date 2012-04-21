@@ -1,10 +1,6 @@
 <div id="slider">
     <div class="wrap">
-        <ul>
-            <li><img src="/images/temp/slider1.jpg"></li>
-            <li><img src="/images/temp/slider1.jpg"></li>
-            <li><img src="/images/temp/slider1.jpg"></li>
-        </ul>
+        <?= $this->slides; ?>
     </div><!--/.wrap -->
 </div><!--/#slider-->
 
@@ -17,7 +13,8 @@
             <div class="outer_post">
                 <div class="photo">
                 <? if($article->get_thumbnail_image()): ?>
-                    <img src="<?= $article->get_thumbnail_image()->get_permalink();?>">
+                    <img src="<?= $article->get_thumbnail_image()->get_permalink_blur();?>" class="blur">
+                    <img src="<?= $article->get_thumbnail_image()->get_permalink();?>" class="focus" style="display: none">
                 <? endif; ?>
                 </div>
                 <div class="content">

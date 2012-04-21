@@ -12,7 +12,7 @@ if(isset($this->article)) {
 	$facebook_message = $this->article->get_facebook_message();
 	$time_create = $this->article->get_time_create();
 	$time_update = $this->article->get_time_update();
-	$time_publish = date('m/d/Y H:s', $this->article->get_time_publish());
+	$time_publish = date('m/d/Y', $this->article->get_time_publish());
 	$status = $this->article->get_status();
 	
 	$image_hash = $this->article->get_image_hash();
@@ -71,7 +71,7 @@ $type = $this->user->get_type();
 
 		<div class="span4">
 			<h3>Publish Time</h3>
-			<input type="text" id="time_publish" name="time_publish" value="<?php echo $time_publish;?>" /><br />
+			<input type="text" class="datepicker" id="time_publish" name="time_publish" value="<?php echo $time_publish;?>" /><br />
 		
 			<h3>Status</h3>
 			<?php if ($type >= 5): ?>

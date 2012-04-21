@@ -241,6 +241,28 @@ class Ajax_Image_Upload_Controller extends Ajax_Image_Controller {
 		   	return $eMessage;
 		}
 	}
+	
+	
+	/* might not need VVVV */
+	
+	protected function blur_image($image_p, $save, $quality, $type){
+		$attr = getimagesize($image_p);
+		
+		$image2 = imagecreate($attr[0], $attr[1]);
+		imagecopy($image2, $image_p, 0, 0, $attr[0], $attr[1], $attr[0], $attr[1]);
+		imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+		imagecopy($image, $image2, 0, 0, $attr[0], $attr[1], $attr[0], $attr[1]);
+		
+		$s = explode('.', $save);
+		
+		$save = $s[0] . '_blur' . $s[1];
+		
+		switch($type){
+			case 'jpg':
+				imagejpeg($image2, $save, 100);
+				break;
+		}
+	}
    
 }
 ?>

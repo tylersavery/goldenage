@@ -10,12 +10,15 @@ class Admin_Controller extends Static_Base_Controller {
         
         $this->title .= ' | Admin';        
         
-        $this->js_head[] = JS_ROOT.'admin/table_sort.js';
-        $this->js_head[] = JS_ROOT.'admin/table_search.js';
+        //$this->js_head[] = JS_ROOT.'admin/table_sort.js';
+        //$this->js_head[] = JS_ROOT.'admin/table_search.js';
         $this->js_head[] = JS_ROOT.'admin/url_parser.js';
         $this->js_head[] = JS_ROOT.'admin/bootstrap_modal.js';
         $this->js_head[] = JS_ROOT.'admin/bootstrap_dropdown.js';
         $this->js_head[] = JS_ROOT.'admin/bootstrap_buttons.js';
+        $this->js_head[] = JS_ROOT.'admin/jquery.ui.core.js';
+        $this->js_head[] = JS_ROOT.'admin/jquery.ui.widget.js';
+        $this->js_head[] = JS_ROOT.'admin/jquery.ui.datepicker.js';
         $this->js_head[] = JS_ROOT.'admin/tinymce/tinymce.js';
         $this->js_head[] = JS_ROOT.'admin/tinymce/config.js';
         $this->js_head[] = JS_ROOT.'admin/admin_image_manage.js';
@@ -23,6 +26,7 @@ class Admin_Controller extends Static_Base_Controller {
         $this->js_head[] = JS_ROOT.'admin/admin.js';
         
         $this->css[] = CSS_ROOT.'bootstrap.min.css';
+        $this->css[] = CSS_ROOT.'smoothness/jquery-ui-theme.css';
         $this->css[] = CSS_ROOT.'jcrop.css';
         $this->css[] = CSS_ROOT.'admin.css';
         

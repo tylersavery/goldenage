@@ -12,6 +12,10 @@ class Pigeon {
         $this->controllers = array(
            
             
+            'Blur_Controller' => array(
+                array('blur', 'images', 'uploads', '{is_string:filename}')   
+            ),
+            
             //frontend
             
             'Main_Controller' => array(
@@ -171,6 +175,9 @@ class Pigeon {
             ),
             
             
+            
+            
+            
         );
     }
     
@@ -181,8 +188,16 @@ class Pigeon {
         } else {
             $this->uri_string = '';
         }
-        
+
         $this->uri = explode('/', $this->uri_string);
+        
+        
+        if($this->uri[0] == 'blur'){
+            $data = array('filename'=>$this->uri[3]);
+            
+            $this->controller = new Blur_Controller($this->uri, $data);
+            return $this->controller->render_view();
+        }
         
         foreach ($this->uri as $key=>$value) {
             if ((int)$value != null) $this->uri[$key] = (int)$value;
@@ -233,7 +248,16 @@ class Pigeon {
         }
         
         if (empty($this->controller)) {
-            $this->controller = new Static_404_Controller($this->uri, $this->controller_data);
+            
+            if($this->uri[0] == 'blur'){
+                
+                $data = array('filename'=>$this->uri[3]);
+                debug($data);
+                
+                $this->controller = new Blur_Controller($this->uri, $data);
+            } else {
+               $this->controller = new Static_404_Controller($this->uri, $this->controller_data);
+            }
         }
         
         return $this->controller->render_view();

@@ -58,7 +58,10 @@ class Article_Model extends Core_Article_Model {
 	}
 	
 	public static function find_home_articles(){
-		$sql = "SELECT * FROM ".static::$table_name . " WHERE category_id <> '". STATIC_CATEGORY_ID ."' ORDER BY time_publish DESC";
+		
+		$now = time();
+		
+		$sql = "SELECT * FROM ".static::$table_name . " WHERE category_id <> ". STATIC_CATEGORY_ID ." AND time_publish <= ". $now ." ORDER BY time_publish DESC";
 		return static::find_by_sql($sql);
 		
 	}

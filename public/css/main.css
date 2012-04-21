@@ -224,6 +224,20 @@ body{
     padding-left:14px;
 }
 
+.outer_post .photo:hover img.blur{
+    display: none;
+}
+
+.outer_post .photo:hover img.focus{
+    display: block !important;
+}
+
+.outer_post .photo img{
+    width:340px;
+    height: 261px;
+    position: absolute;
+}
+
 .outer_post:hover{
     background-color:#e8a749;
 }

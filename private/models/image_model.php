@@ -37,6 +37,10 @@ class Image_Model extends Core_Image_Model {
 	public function get_permalink(){
 		return '/images/uploads/' . $this->get_file_name();
 	}
+	
+	public function get_permalink_blur(){
+		return '/blur/images/uploads/' . $this->get_file_name();
+	}
     
 }
 ?>

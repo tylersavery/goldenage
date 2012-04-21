@@ -8,6 +8,9 @@ class Main_Controller extends Static_Main_Controller {
 
         $this->articles = Article_Model::find_home_articles();
         
+        $homepage = Article_Model::find_by_slug('homepage');
+        
+        $this->content_view->slides = $homepage->get_body();
         $this->content_view->articles = $this->articles;
     }
     

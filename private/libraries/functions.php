@@ -227,5 +227,9 @@ function remove_special_characters($text){
          $ext = substr($str,$i+1,$l);
          return $ext;
  }
+ 
+ function anything(){
+	return true;
+ }
 
 ?>
