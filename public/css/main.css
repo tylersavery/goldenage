@@ -224,11 +224,11 @@ body{
     padding-left:14px;
 }
 
-.outer_post .photo:hover img.blur{
+.outer_post:hover img.blur{
     display: none;
 }
 
-.outer_post .photo:hover img.focus{
+.outer_post:hover img.focus{
     display: block !important;
 }
 

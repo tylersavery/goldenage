@@ -29,6 +29,28 @@ class Blur_Controller extends Core_Controller {
 		imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
         imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
         imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        imagefilter($image, IMG_FILTER_GAUSSIAN_BLUR);
+        
         
         switch($mime){
             case 'image/jpeg':
