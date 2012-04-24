@@ -62,8 +62,9 @@ $(document).ready(function() {
         paste_remove_styles_if_webkit : true,
         paste_strip_class_attributes : true,
         content_css : '/css/bootstrap.min.css',
-        extended_valid_elements : 'img[src|path]',
+        extended_valid_elements : 'img[src|path],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder]',
         relative_urls : false,
+//        extended_valid_elements : '\"a[class|name|href|target|title|onclick|rel],script[type|src],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],$elements\",'
     });
     
     $(".delete").click(function(){   
