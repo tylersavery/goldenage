@@ -117,7 +117,7 @@ class Article_Model extends Core_Article_Model {
 	}
 	
 	
-	public function get_excerpt($num = 16) {
+	public function get_excerpt($num = 40) {
 		
 		return word_trim($this->get_body(), $num);
 	}
