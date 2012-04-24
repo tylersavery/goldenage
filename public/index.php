@@ -11,6 +11,9 @@ switch(ENVIROMENT) {
     case 'dev.thegoldenage.ca':
         define('DOCUMENT_ROOT', DS.'data'.DS.'web'.DS.'dev.thegoldenage.ca'.DS);
         break;
+    case 'thegoldenage.ca':
+        define('DOCUMENT_ROOT', DS.'data'.DS.'web'.DS.'thegoldenage.ca'.DS);
+        break;
     case 'goldenage':
         define('DOCUMENT_ROOT', DS.'Users'.DS.'tyler'.DS.'Sites'.DS.'goldenage'.DS);
         break;
