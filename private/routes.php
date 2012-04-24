@@ -69,7 +69,7 @@ class Pigeon {
             'Admin_Article_Edit_Controller' => array(
                 array('admin', 'article', 'edit', '{is_int:article_id}'),         
             ),
-             'Admin_Delete_Edit_Controller' => array(
+             'Admin_Article_Delete_Controller' => array(
                 array('admin', 'article', 'delete', '{is_int:article_id}'),         
             ),
             
