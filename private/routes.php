@@ -43,6 +43,10 @@ class Pigeon {
                 array('contact')
             ),
             
+            'Archive_Controller' => array(
+                array('archive')
+            ),
+            
             
             
             //admin

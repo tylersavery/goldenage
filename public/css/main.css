@@ -582,6 +582,26 @@ label {
 	font: 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 }
 
+
+
+
+/* ARCHIVE */
+
+ul.archive_list li a{
+    color: #000;
+    font-style: normal;
+    line-height: 20px;
+}
+
+
+
+/* Contact */
+
+.postbody p a, .postbody a{
+    font-style: normal;
+    color: #000;
+}
+
 /* colors:
   
   focused gold:  #e8a749
@@ -590,4 +610,8 @@ label {
   silver: #dbdcdd
   
 */
+
+
+
+
 
