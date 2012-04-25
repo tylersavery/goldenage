@@ -2,6 +2,8 @@
 class Feed_Controller extends Static_Base_Controller {
     
     function __construct($uri, $data) {
+        
+        
         parent::__construct($uri, $data);
         $this->capture_view->format = strtoupper($data['format']);
     }
@@ -30,7 +32,7 @@ class Feed_Controller extends Static_Base_Controller {
             $format = 'RSS2.0';
         }
         
-        $recent_articles = Article_Model::find_all();
+        $recent_articles = Article_Model::find_home_articles();
         
         $rss = new UniversalFeedCreator();
         $rss->useCached();

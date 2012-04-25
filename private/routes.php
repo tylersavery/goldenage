@@ -16,6 +16,7 @@ class Pigeon {
                 array('blur', 'images', 'uploads', '{is_string:filename}')   
             ),
             
+            
             //frontend
             
             'Main_Controller' => array(
@@ -47,6 +48,7 @@ class Pigeon {
                 array('archive')
             ),
             
+           
             
             
             //admin
