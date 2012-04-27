@@ -16,6 +16,7 @@ class Main_Controller extends Static_Main_Controller {
     
     
     protected function content_view() {
+        
         return $this->content_view->capture('main_view.php');
     }
     

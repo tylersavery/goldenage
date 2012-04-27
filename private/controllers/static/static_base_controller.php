@@ -32,7 +32,10 @@ class Static_Base_Controller extends Core_Controller {
 			'appId'  => FACEBOOK_APP_ID,
 			'secret' => FACEBOOK_SECRET));;
 		
-		
+		if(DEBUG){
+			ChromePhp::log('Chrome PHP Debugger');
+			ChromePhp::log($_SERVER);
+		}
 		
     }
     

@@ -12,6 +12,7 @@ require_once(LIBRARY_ROOT.'pagination.php');
 require_once(LIBRARY_ROOT.'facebook.php');
 require_once(LIBRARY_ROOT.'twitter.oauth.php');
 require_once(LIBRARY_ROOT.'bitly.php');
+require_once(LIBRARY_ROOT.'chromephp.php');
 
 // include routes.php
 require_once(PRIVATE_ROOT.'routes.php');

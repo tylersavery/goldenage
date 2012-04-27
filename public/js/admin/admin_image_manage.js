@@ -59,9 +59,10 @@ $(document).ready(function() {
 					$('#modal_manage_images').modal('hide');
 				} else if (instance == 'inline') {
 					var image_hash = $(this).attr('image_hash');
+					
 					if (current_modal_action == 'related_image_select') {
 						var image_src = $(this).find('img').attr('src');
-						image_src = image_src.replace('_thumbnail', '_main');
+						image_src = image_src.replace('_thumbnail', '_original');
 						tinyMCE.execCommand('mceInsertContent',false,'<img src="'+image_src+'" path="'+image_hash+'" />');
 						$('#modal_manage_images').modal('hide');
 					} else {

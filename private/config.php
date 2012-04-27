@@ -85,7 +85,7 @@ switch(ENVIROMENT) {
         define('DB_PASS', 'OG36g9QT7hQfXzNf');
         define('DB_NAME', 'goldenage');
         define('DB_SALT', 'b810687c692b88184eb11c6d29b5cda4');
-        define('DEBUG', TRUE);
+        define('DEBUG', FALSE);
         define('MIN_JS', FALSE);
         define('URL', 'http://goldenage/');
         define('FB_APP_ID', '');
