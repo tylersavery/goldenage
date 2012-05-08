@@ -3,8 +3,12 @@
 <head>
     <title><?= $this->title; ?></title>
     <meta http-equiv="imagetoolbar" content="false" />
-    <meta name="description" content="A daily digital briefing on the life of Toronto, covering urban affairs, business, technology, culture and design.">
-    <meta name="author" content="Toronto Standard Media Company Limited">
+    <meta name="description" content="Jesse Markowitz - Music Managemtn & Consulting">
+    <meta name="author" content="Jesse Markowitz">
+    <meta property="og:title" content="Goldenage" />
+    <meta property="og:url" content="http://thegoldenage.ca/" />
+    <meta property="og:description" content="Jesse Markowitz - Music Managemtn & Consulting" />
+    <meta property="og:image" content="http://thegoldenage.ca/images/goldenage.png" />
     <? if ($this->meta): ?>
         <!-- include meta tags -->
         <? foreach ($this->meta as $meta): ?>
