@@ -3,12 +3,12 @@
 <head>
     <title><?= $this->title; ?></title>
     <meta http-equiv="imagetoolbar" content="false" />
-    <meta name="description" content="Jesse Markowitz - Music Managemtn & Consulting">
+    <meta name="description" content="Jesse Markowitz - Music Management & Consulting">
     <meta name="author" content="Jesse Markowitz">
     <meta property="og:title" content="Goldenage" />
     <meta property="og:url" content="http://thegoldenage.ca/" />
-    <meta property="og:description" content="Jesse Markowitz - Music Managemtn & Consulting" />
-    <meta property="og:image" content="http://thegoldenage.ca/images/goldenage.png" />
+    <meta property="og:description" content="Jesse Markowitz - Music Management & Consulting" />
+    <meta property="og:image" content="http://thegoldenage.ca/images/thumb.jpg" />
     <? if ($this->meta): ?>
         <!-- include meta tags -->
         <? foreach ($this->meta as $meta): ?>
