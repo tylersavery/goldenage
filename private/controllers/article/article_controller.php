@@ -15,8 +15,8 @@ class Article_Controller extends Static_Main_Controller {
         $this->article = Article_Model::find_by_slug($data['article_slug']);
         
         if (!$this->article) { redirect_to('/404'); }
-        $this->meta = array();
 
+        $this->meta = array();
         $this->meta[] = 'property="og:title" content="' . $this->article->get_title() . '"';
         $this->meta[] = 'property="og:description" content="' . $this->article->get_subtitle() . '"';
         $this->meta[] = 'property="og:image" content="' . substr_replace(URL,"",-1) . $this->article->get_thumbnail_image()->get_permalink() . '"';
