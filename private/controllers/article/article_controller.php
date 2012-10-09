@@ -16,7 +16,7 @@ class Article_Controller extends Static_Main_Controller {
                 $this->article = Article_Model::find_by_slug($data['article_slug']);
                 break;
             case "about":
-                $this->article = Article_Model::find_by_slug('mission');
+                $this->article = Article_Model::find_by_slug('about');
                 break;
             case "services":
                 $this->article = Article_Model::find_by_slug('services');
