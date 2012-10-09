@@ -19,7 +19,9 @@ class Article_Controller extends Static_Main_Controller {
         $this->meta = array();
         $this->meta[] = 'property="og:title" content="' . $this->article->get_title() . '"';
         $this->meta[] = 'property="og:description" content="' . $this->article->get_subtitle() . '"';
-        $this->meta[] = 'property="og:image" content="' . substr_replace(URL,"",-1) . $this->article->get_thumbnail_image()->get_permalink() . '"';
+        if($this->article->get_thumbnail_image()){
+            $this->meta[] = 'property="og:image" content="' . substr_replace(URL,"",-1) . $this->article->get_thumbnail_image()->get_permalink() . '"';
+        }
         $this->meta[] = 'property="og:type" content="blog"';
         //$this->meta[] = 'property="og:image" content="' . $this->article->get_image('thumbnail') . '"';
         
