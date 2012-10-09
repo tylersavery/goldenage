@@ -297,13 +297,15 @@ body{
 }
 
 .outer_post .content .body{
+    font-family: 'Times New Roman', serif;
     position:relative;
     background-color:#fff;
     height: 120px;
     padding: 20px;
     font-size:16px;
     color: #000;
-    font-style:italic;
+    line-height: 18px;
+
 }
 
 .outer_post .content .body .more{
@@ -468,6 +470,8 @@ clear:both;
     margin-bottom: 9px;
     margin-top: 9px;
     line-height: 18px;
+    font-family: 'Times New Roman', serif;
+    font-style: normal;;
 }
 
 .inner_post .content .comment .more{
