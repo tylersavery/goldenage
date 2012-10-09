@@ -54,12 +54,12 @@ class Feed_Controller extends Static_Base_Controller {
           
             $image = $article->get_thumbnail_image();
            // $attr = imagesize()
-          
-            $item->enclosure         = new EnclosureItem();
-            $item->enclosure->url    = 'http://' . ENVIROMENT . $image->get_permalink();
-            
-            $item->enclosure->length = "65905";
-            $item->enclosure->type   = 'image/jpeg';
+            if($image){
+                $item->enclosure         = new EnclosureItem();
+                $item->enclosure->url    = 'http://' . ENVIROMENT . $image->get_permalink();
+                $item->enclosure->length = "65905";
+                $item->enclosure->type   = 'image/jpeg';
+            }
             
             $rss->addItem($item);
         }
