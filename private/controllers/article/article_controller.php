@@ -11,8 +11,20 @@ class Article_Controller extends Static_Main_Controller {
         parent::__construct($uri, $data);
         
         $this->css[] = CSS_ROOT . 'article.css';
-        
-        $this->article = Article_Model::find_by_slug($data['article_slug']);
+        switch($uri[0]){
+            case "article":
+                $this->article = Article_Model::find_by_slug($data['article_slug']);
+                break;
+            case "about":
+                $this->article = Article_Model::find_by_slug('mission');
+                break;
+            case "services":
+                $this->article = Article_Model::find_by_slug('services');
+                break;
+            case "contact":
+                $this->article = Article_Model::find_by_slug('contact');
+                break;
+        }
         
         if (!$this->article) { redirect_to('/404'); }
 

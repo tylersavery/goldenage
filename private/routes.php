@@ -23,27 +23,13 @@ class Pigeon {
                 array()
             ),
             'Article_Controller' => array(
-              array('article', '{is_string:article_slug}||{is_int:article_id}')
+              array('article', '{is_string:article_slug}||{is_int:article_id}'),
+              array('about'),
+              array('services'),
+              array('contact')
             ),
             
-            //Pages
-            
-            'Mission_Controller' => array(
-                array('mission')
-            ),
-            
-            'Services_Controller' => array(
-                array('services')
-            ),
-            
-            'Roster_Controller' => array(
-                array('roster')
-            ),
-            
-            'Contact_Controller' => array(
-                array('contact')
-            ),
-            
+
             'Archive_Controller' => array(
                 array('archive')
             ),
