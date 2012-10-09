@@ -22,7 +22,6 @@ class Article_Controller extends Static_Main_Controller {
         $this->meta[] = 'property="og:image" content="' . substr_replace(URL,"",-1) . $this->article->get_thumbnail_image()->get_permalink() . '"';
         $this->meta[] = 'property="og:type" content="blog"';
         //$this->meta[] = 'property="og:image" content="' . $this->article->get_image('thumbnail') . '"';
-        $this->meta[] = 'property="fb:app_id" content="'.FB_APP_ID.'"';
         
         $this->category = $this->article->get_category();
         $this->user = $this->article->get_user();
