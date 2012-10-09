@@ -15,9 +15,11 @@ class Article_Controller extends Static_Main_Controller {
         $this->article = Article_Model::find_by_slug($data['article_slug']);
         
         if (!$this->article) { redirect_to('/404'); }
-        
+        $this->meta = array();
+
         $this->meta[] = 'property="og:title" content="' . $this->article->get_title() . '"';
         $this->meta[] = 'property="og:description" content="' . $this->article->get_subtitle() . '"';
+        $this->meta[] = 'property="og:image" content="' . URL . 'images/uploads/' . $this->article->get_main_image() . '"';
         $this->meta[] = 'property="og:type" content="blog"';
         //$this->meta[] = 'property="og:image" content="' . $this->article->get_image('thumbnail') . '"';
         $this->meta[] = 'property="fb:app_id" content="'.FB_APP_ID.'"';
