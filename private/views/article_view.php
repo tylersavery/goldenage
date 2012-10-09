@@ -26,7 +26,10 @@
                             </div>                            
                             
                         </div> <!--/.body -->
-                        <div class="category"><?= ucwords($this->article->get_category()->get_title());?>
+                        <div class="category">
+                            <? if(strtolower($this->article->get_category()->get_title()) != 'static'): ?>
+                            <?= ucwords($this->article->get_category()->get_title());?>
+                            <? endif; ?>
 								<span class="tags">
 								<? if($this->article->get_tags()): ?>
 									<? foreach($this->article->get_tag_array() as $tag): ?>
